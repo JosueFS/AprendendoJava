@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project default="Compilar" name="L2_Robot Compiler">
+
+    <!-- folder properties-->
+    <property name="dir.buildfile" location="build"/>
+    <property name="dir.workspace" location="${ant.file}/../.."/>
+    <target name="Compilar">
+        <jar destfile="${dir.buildfile}/L2jRobot.jar">
+            <manifest>
+                <attribute name="Main-Class" value="gui.frames.login.Connect"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+                <fileset dir="${dir.workspace}/L2JBot/lib"/>
+                <zipfileset excludes="META-INF/*.SF" src="${dir.workspace}/L2JBot/lib/weblaf-complete-1.29.jar"/>
+            </jar>
+        <copy todir="${dir.buildfile}">
+            <fileset dir="dist"/>
+        </copy>
+    </target>
+</project>
