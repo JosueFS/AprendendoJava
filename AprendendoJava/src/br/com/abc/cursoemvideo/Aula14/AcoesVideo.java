@@ -1,8 +1,8 @@
 package br.com.abc.cursoemvideo.Aula14;
-//Teste
+//Teste2
 public interface AcoesVideo {
     void play();
     void pause();
-    void like();
+    git void like();
 
 }
